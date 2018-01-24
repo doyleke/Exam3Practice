@@ -88,11 +88,14 @@ def shape(r):
     #    TIME ESTIMATE:  15 minutes.
     # ------------------------------------------------------------------
 
+    v=0
     for k in range(r):
-        for j in range(r,k//2,-1):
-            print('+',end='')
-        for l in range(k//2,k,-1):
-            print(l)
+        for j in range(r, 0, -1):
+            v=v+j
+        print(' '*r, end='')
+        print('!', end='')
+        print(v, end='')
+        print('-'*r)
 
 
 # ----------------------------------------------------------------------
